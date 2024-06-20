@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Цирюльникъ - Вакансии</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="back-button">
+                <img src="images/Back (1).png" alt="Назад">
+            </div>
+            <div class="user-icon">
+                <img src="images/User.png" alt="Пользователь" id="openRegistration" style="cursor: pointer;">
+            </div>
+        </div>
+        <div class="hero">
+            <div class="hero-background">
+                <img src="images/business-handsome-manager-working-laptop-holding-computer-looking-camera-standing 1.png" alt="Человек" class="person-image">
+                <div class="hero-content">
+                    <h1>Lorem ipsum</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    <button class="gradient-button">ПРИСТУПИТЬ К ОБУЧЕНИЮ</button>
+                </div>
+            </div>
+        </div>
+        <div class="vacancies">
+            <h2>ВАКАНСИИ</h2>
+            <p>Актуальные вакансии в салонах Цирюльникъ</p>
+            <div class="city-selector">
+                <select id="citySelect" onchange="filterVacancies()">
+                    <option value="all">Выберите город</option>
+                    <option value="Калининград">Калининград</option>
+                    <option value="Москва">Москва</option>
+                    <option value="Санкт-Петербург">Санкт-Петербург</option>
+                    <option value="Екатеринбург">Екатеринбург</option>
+                    <option value="Новосибирск">Новосибирск</option>
+                    <option value="Владивосток">Владивосток</option>
+                </select>
+            </div>
+            <div class="vacancy-grid">
+                <div class="vacancy" data-city="Калининград">
+                    <h3>Женский парикмахер</h3>
+                    <p>Калининград</p>
+                    <button onclick="window.location.href='timeLine.html'">Пройти обучение</button>
+                </div>
+                <div class="vacancy" data-city="Москва">
+                    <h3>Мужской парикмахер</h3>
+                    <p>Москва</p>
+                    <button onclick="window.location.href='timeLine.html'">Пройти обучение</button>
+                </div>
+                <div class="vacancy" data-city="Санкт-Петербург">
+                    <h3>Администратор</h3>
+                    <p>Санкт-Петербург</p>
+                    <button onclick="window.location.href='timeLine.html'">Пройти обучение</button>
+                </div>
+                <div class="vacancy" data-city="Екатеринбург">
+                    <h3>Промоутер</h3>
+                    <p>Екатеринбург</p>
+                    <button onclick="window.location.href='timeLine.html'">Пройти обучение</button>
+                </div>
+                <div class="vacancy" data-city="Новосибирск">
+                    <h3>Мастер маникюра</h3>
+                    <p>Новосибирск</p>
+                    <button onclick="window.location.href='timeLine.html'">Пройти обучение</button>
+                </div>
+                <div class="vacancy" data-city="Владивосток">
+                    <h3>Мастер маникюра</h3>
+                    <p>Владивосток</p>
+                    <button onclick="window.location.href='timeLine.html'">Пройти обучение</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p>© Цирюльникъ. Все права защищены</p>
+            <img src="images/Social Icons (1).png" alt="ВКонтакте">
+        </div>
+    </div>
+
+    <!-- Модальное окно регистрации -->
+    <div id="registrationModal" class="modal">
+        <div class="modal-content">
+            <span class="close-registration">&times;</span>
+            <h2>Регистрация</h2>
+            <form id="registrationForm">
+                <label for="username">Имя пользователя:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
