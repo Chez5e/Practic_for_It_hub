@@ -1,107 +1,9 @@
-/*фильрация
-.
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: Arial, sans-serif;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-
-.header, .footer {
-    background-color: #f8f8f8;
-    text-align: center;
-    padding: 10px;
-}
-
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.hero {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f0f0f0;
-    padding: 20px;
-}
-
-.hero-content {
-    text-align: center;
-}
-
-.vacancies {
-    text-align: center;
-    padding: 20px;
-}
-
-.vacancy-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.vacancy {
-    background-color: #eee;
-    padding: 20px;
-    border-radius: 5px;
-    text-align: center;
-    width: 200px;
-}
-
-.footer {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-.city-selector {
-    margin-bottom: 20px;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
-}
-
-.show {
-    display: block;
-}
-
-/*фильрация*/
-
 body {
     font-family: Calibri, sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
+    background-color: #ffffff;
 }
 
 .container {
@@ -110,7 +12,7 @@ body {
 }
 
 .header {
-    background-color: white;
+    background-color: #ffff;
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -121,23 +23,19 @@ body {
 .header .back-button img,
 .header .user-icon img {
     width: 24px;
+    color: #ffff
 }
 
-.hero {
-    background-color: rgb(255, 255, 255);
-    padding: 5px;
-    text-align: center;
-    position: relative;
-    border-radius: 80px;
-}
+
+/*ЧЕЛ*/ 
 
 .hero-background {
-    background: linear-gradient(to right, #ffffff, #ffffff);
+    background: linear-gradient(to right, #F1F1F1, #F1F1F1);
     position: relative;
-    border-radius: 80px;
+    border-radius: 10px;
     padding:10px;
-    max-width: 20000px;
-    margin: 0 auto;
+    max-width: 2000px;
+    margin: 40px auto;
     overflow: hidden;
 }
 
@@ -162,7 +60,7 @@ body {
 .hero-content {
     position: relative;
     z-index: 2;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     text-align: center;
 }
 
@@ -177,7 +75,7 @@ body {
 }
 
 .gradient-button {
-    border: 2px solid #868484;
+    border: 2px solid #6a6a6a;
     border-radius: 10px;
     padding: 10px 20px;
     font-size: 16px;
@@ -186,7 +84,7 @@ body {
     transition: background 0.3s, color 0.5s;
     display: inline-block;
 }
-
+ 
 .gradient-button:hover {
     background: linear-gradient(to right, #585858 100%, transparent 45%);
     color: #ffffff;
@@ -251,7 +149,7 @@ body {
 }
 
 #cityDropdown a:hover {
-    background-color: #a23232;
+    background-color: #ffffff;
 }
 
 .vacancy-grid {
@@ -292,7 +190,7 @@ body {
 }
 
 .vacancy button {
-    background-color: #fa5661;
+    background-color: #D5101C;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -521,8 +419,8 @@ body, html {
 }
 
 .header, .footer {
-    background-color: #f8f8f8;
-    padding: 20px;
+    background-color: #ffff;
+    padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -558,6 +456,8 @@ body, html {
 .progress {
     margin-top: 100px;
     margin-bottom: 80px;
+    padding-left: 50px;
+   
 }
 
 
@@ -632,9 +532,10 @@ input[type="file"] {
 
 .header .back-button img,
 .header .user-icon img {
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     cursor: pointer;
+    color: #ffff
 }
 
 
@@ -669,7 +570,7 @@ input[type="file"] {
 }
 
 .vacancy button {
-    background-color: #ff6b6b;
+    background-color: #D5101C;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -684,7 +585,7 @@ input[type="file"] {
 .footer {
     text-align: center;
     padding: 20px;
-    background-color: #333;
+    background-color: #585858;
     color: #fff;
 }
 
@@ -702,16 +603,86 @@ input[type="file"] {
 }
 
 .modal-content {
-    background-color: #fefefe;
+    background-color: #585858;
     margin: 15% auto;
     padding: 20px;
-    border: 1px solid #888;
+    border: 1px solid #585858;
     width: 80%;
     max-width: 500px;
 }
 
+/*smrad button*/
 
+body {
+    font-family: Arial, sans-serif;
+}
 
+.icon {
+    font-size: 24px;
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
 
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+    text-align: center;
+}
 
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.telegram-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #0088cc;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.telegram-button:hover {
+    background-color: #006bb3;
+}

@@ -249,3 +249,54 @@ function filterVacancies() {
         }
     }
 }
+
+
+// Открытие регистрационного модального окна
+document.getElementById("openRegistration").onclick = function() {
+    document.getElementById("registrationModal").style.display = "block";
+};
+
+// Закрытие регистрационного модального окна
+document.querySelector(".close-registration").onclick = function() {
+    document.getElementById("registrationModal").style.display = "none";
+};
+
+// Функция для фильтрации вакансий по городам
+function selectCity(city, event) {
+    event.preventDefault();
+    const vacancies = document.querySelectorAll('.vacancy');
+    vacancies.forEach(vacancy => {
+        if (vacancy.getAttribute('data-city') === city) {
+            vacancy.style.display = 'block';
+        } else {
+            vacancy.style.display = 'none';
+        }
+    });
+    document.getElementById('cityButton').innerText = city;
+    document.getElementById('cityDropdown').style.display = 'none';
+}
+
+// Открытие и закрытие выпадающего списка
+function toggleDropdown() {
+    const dropdown = document.getElementById('cityDropdown');
+    dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+}
+
+// Обработка входа через Telegram
+function onTelegramAuth(user) {
+    console.log(user);
+    // Здесь вы можете отправить данные пользователя на свой сервер для дальнейшей обработки
+    alert(`Привет, ${user.first_name}!`);
+}
+
+// Пожалуйста, замените YOUR_BOT_USERNAME на имя вашего бота, а YOUR_AUTH_URL на URL-адрес вашего сервера для обработки авторизации.
+document.getElementById('telegram-login-button').innerHTML = '<script async src="https://telegram.org/js/telegram-widget.js?15" data-telegram-login="chezeek_bot" data-size="large" data-radius="0" data-auth-url="7341899910:AAGFyea5FoAJsEeT4yFBJbxdq4HUrNgSqBk" data-request-access="write"></script>';
+// Открытие модального окна с профилем
+function openProfile() {
+    document.getElementById('profileModal').style.display = 'block';
+}
+
+// Закрытие модального окна с профилем
+function closeProfile() {
+    document.getElementById('profileModal').style.display = 'none';
+}

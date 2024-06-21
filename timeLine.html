@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Progress</title>
+    <title>Личный кабинет</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 <body>
     <div class="container">
@@ -15,20 +18,19 @@
                 </a>
             </div>
             <div class="user-icon">
-                <img src="images\User.png" alt="Пользователь">
-                <img src="images\Home (1).png" alt="Дом">
+               
             </div>
         </div>
         <div class="progress">
             <h2>Название вакансии</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            <p>Практика it hub</p>
             <div class="timeline">
                 <div class="timeline-item completed">
                     <div class="marker checked"></div>
                     <div class="content">
                         <h3>ЗАДАНИЕ 1</h3>
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    <p>Задание как сдать практику</p>
                     <button id="task1" class="view-task-button">Посмотреть задание</button>
                 </div>
                 <div class="timeline-item">
@@ -36,7 +38,7 @@
                     <div class="content">
                         <h3>ЗАДАНИЕ 2</h3>
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    <p>Как добавить api telegram?</p>
                     <button id="task2" class="view-task-button">Посмотреть задание</button>
                 </div>
                 <div class="timeline-item">
@@ -44,7 +46,7 @@
                     <div class="content">
                         <h3>ЗАДАНИЕ 3</h3>
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    <p>Как сделать по работу по макету?</p>
                     <button id="task3" class="view-task-button">Посмотреть задание</button>
                 </div>
                 <div class="timeline-item">
@@ -52,7 +54,7 @@
                     <div class="content">
                         <h3>ЗАДАНИЕ 4</h3>
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    <p>Как сделать модальное окно</p>
                     <button id="task4" class="view-task-button">Посмотреть задание</button>
                 </div>
                 <div class="timeline-item">
@@ -60,7 +62,7 @@
                     <div class="content">
                         <h3>ЗАДАНИЕ 5</h3>
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    <p>Завершаюший курс как сдать практику на 100 баллов</p>
                     <button id="task5" class="view-task-button">Посмотреть задание</button>
                 </div>
             </div>
@@ -102,10 +104,73 @@
     <div id="congratulationsModal" class="modal">
         <div class="modal-content">
             <h2>Поздравляем!</h2>
-            <p>Поздравляем вы завершили обучение! Давайте закрепим знания итоговым тестированием.</p>
+            <p>Вы окончили наши курсы!</p>
             <button id="finalTestButton" class="submit-button">Перейти к тестированию</button>
         </div>
     </div>
+
+    <div id="profileModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeProfile()">&times;</span>
+            <h2>Личный кабинет</h2>
+            <p>Здесь может быть ваша информация о профиле пользователя.</p>
+            <a href="https://telegram.org/" class="telegram-login-button" target="_blank">Войти с помощью Telegram</a>
+        </div>
+    </div> 
+
+    <div class="icon" onclick="openModal()">
+        <i class="fas fa-user"></i>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Личный кабинет</h2>
+            <a href="https://telegram.org" class="telegram-button">Войти с помощью Telegram</a>
+        </div>
+    </div>
+    <div class="icon" onclick="openModal()">
+        <i class="fas fa-user"></i>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Личный кабинет</h2>
+            <a href="https://web.telegram.org/k/" class="telegram-button">Войти с помощью Telegram</a>
+        </div>
+    </div>
+
+    <script>
+        function openModal() {
+            document.getElementById("modal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("modal").style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == document.getElementById("modal")) {
+                closeModal();
+            }
+        }
+    </script>
+    <script>
+        function openModal() {
+            document.getElementById("modal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("modal").style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == document.getElementById("modal")) {
+                closeModal();
+            }
+        }
+    </script>
 
     <script src="script.js"></script>
 </body>
